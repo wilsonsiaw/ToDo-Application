@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import { FaMoon } from "react-icons/fa";
+import Input from './components/Input/Input';
 
 
 function App() {
   
   return (
-    <div>
+    <div className='body'>
 
       {/* create the header element */}
       <header className='headerWrapper'>
@@ -22,6 +23,7 @@ function App() {
         </div>
       </header>
 
+      <Input />
     </div>
   )
 }
