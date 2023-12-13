@@ -6,12 +6,19 @@
 
 @media screen and (max-width: 767px) {
   
+  .body {
+    background-color: #eee;
+    height: 100vh;
+  }
+
   .headerWrapper {
     height: 200px;
     width: 100vw;
     background-image: url('./assets/bg-mobile-light.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    position: relative;
   }
 
   .header-content {
@@ -42,8 +49,13 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+  .body {
+    background-color: #eee;
+    height: 100vh;
+  }
+  
   .headerWrapper {
-    height: 200px;
+    height: 220px;
     width: 100vw;
     background-image: url('./assets/bg-mobile-light.jpg');
     background-repeat: no-repeat;
@@ -78,8 +90,13 @@
 
 @media screen and (min-width: 1024px) {
 
+  .body {
+    background-color: #eee;
+    height: 100vh;
+  }
+  
   .headerWrapper {
-    height: 190px;
+    height: 300px;
     width: 100vw;
     background-image: url('./assets/bg-desktop-light.jpg');
     background-repeat: no-repeat;
@@ -103,6 +120,7 @@
     color: white;
     margin-left: 10px;
     letter-spacing: 5px;
+    font-size: 1.4rem;
   }
 
   .moon {
