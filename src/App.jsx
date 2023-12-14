@@ -2,7 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import { FaMoon } from "react-icons/fa";
 import Input from './components/Input/Input';
-import AddItem from './components/AddItem/AddItem';
+import AddItem from './components/AddItem/AddItem';;
+import Filter from './components/Filter/Filter';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       </header>
 
       <Input />
+      <Filter />
       <AddItem />
     </div>
   )
