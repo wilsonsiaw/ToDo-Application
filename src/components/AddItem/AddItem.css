@@ -1,19 +1,20 @@
 @media screen and (max-width: 767px) {
 
-    .addItemWrapper {
-        width: 85%;
-        margin: 0 auto;
-        height: 60px;
-        margin-top: -75px; 
-        /* adjust this margin to change position of element */
-    }
-
     .item{
+        width: 85%;
+        height: fit-content;
+        margin: 0 auto;
+        
         background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
+
+        position: relative;
+        top: -70px;
+
+        border-bottom: 1px solid lightgrey;
     }
 
     .itemContent p {
@@ -39,19 +40,21 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
-    .addItemWrapper {
-        width: 85%;
-        margin: 0 auto;
-        height: 60px;
-        margin-top: -70px;
-    }
-
     .item{
+        width: 85%;
+        height: fit-content;
+        margin: 0 auto;
+
         background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
+
+        position: relative;
+        top: -70px;
+
+        border-bottom: 1px solid lightgrey;
     }
 
     .itemContent p {
@@ -77,19 +80,21 @@
 
 @media screen and (min-width: 1024px) {
 
-    .addItemWrapper {
-        width: 55%;
-        margin: 0 auto;
-        height: 60px;
-        margin-top: -110px;
-    }
-
     .item{
+        width: 55%;
+        height: fit-content;
+        margin: 0 auto;
+
         background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
+
+        position: relative;
+        top: -110px;
+
+        border-bottom: 1px solid lightgrey;
     }
 
     .itemContent p {
