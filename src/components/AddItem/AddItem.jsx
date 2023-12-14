@@ -5,7 +5,7 @@ import { MdDeleteForever } from "react-icons/md";
 
 const AddItem = () => {
   return (
-    <div className='addItemWrapper'>
+    <div>
         <div className='item'>
             <div className="itemContent">
                 <MdCancel id='cancel'/>
@@ -13,7 +13,6 @@ const AddItem = () => {
             </div>
             <MdDeleteForever id='delete'/>
         </div>
-        <hr id='hr'/>
     </div>
   )
 }
