@@ -4,7 +4,8 @@
         width: 85%;
         margin: 0 auto;
         height: 60px;
-        margin-top: -50px;
+        margin-top: -75px; 
+        /* adjust this margin to change position of element */
     }
 
     .item{
@@ -42,7 +43,7 @@
         width: 85%;
         margin: 0 auto;
         height: 60px;
-        margin-top: -50px;
+        margin-top: -70px;
     }
 
     .item{
@@ -80,7 +81,7 @@
         width: 55%;
         margin: 0 auto;
         height: 60px;
-        margin-top: -50px;
+        margin-top: -110px;
     }
 
     .item{
