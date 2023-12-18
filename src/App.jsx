@@ -10,6 +10,7 @@ function App() {
 
   // create useState hook
   const [todos, setTodo] = useState([]);
+  const [filter, setFilter] = useState("all");
   
   // function that adds new todo items to the todo list
   const addTodo = (text) => {
@@ -46,6 +47,25 @@ function App() {
     const todoItems = todos.filter(todo => !todo.completed);
     setTodo(todoItems);
   }
+
+  // function that updates the filter value;
+  const setFilterValue = (value) => setFilter(value);
+
+  // function that renders based on the filter value;
+  const renderItems = () => {
+    let filteredList;
+
+    if (filter === "all") {
+      filteredList = todos;
+    } else if (filter === "active") {
+      filteredList = todos.filter(todo => !todo.completed);
+    } else if (filter === "completed") (
+      filteredList = todos.filter(todo => todo.completed)
+    )
+
+    return filteredList.map(todo => (<AddItem key={todo.id} data={todo} deleteHandler={deleteItemById}
+    updateStatus={toggleItemStatus}/>))
+  }
   
   return (
     <div className='body'>
@@ -65,13 +85,10 @@ function App() {
       </header>
       {/* Add the function created above as a handler */}
       <Input addHandler={addTodo}/>
-      <Filter />
+      <Filter updateFilter={setFilterValue}/>
 
-      {/* Map over the todos items and render an individual AddItem component */}
-      {todos.map((todo) => <AddItem key={todo.id} data={todo} deleteHandler={deleteItemById}
-      updateStatus={toggleItemStatus}/>)}
-      
-      {/* <AddItem /> */}
+      {renderItems()}
+
       <div className='footer'>
         <p>4 items</p>
         <button type='button' onClick={clearCompletedItems}>Clear Completed</button>
