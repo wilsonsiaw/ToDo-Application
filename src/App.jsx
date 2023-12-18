@@ -66,6 +66,19 @@ function App() {
     return filteredList.map(todo => (<AddItem key={todo.id} data={todo} deleteHandler={deleteItemById}
     updateStatus={toggleItemStatus}/>))
   }
+
+  // function that gets the total number of list items
+  const getNum = () => {
+    if (filter === "all") {
+      return todos.length;
+    } else if (filter === "active") {
+      return todos.filter(todo => !todo.completed).length;
+    } else if (filter === "completed") {
+      return todos.filter(todo => todo.completed).length;
+    }
+
+    return 0;
+  }
   
   return (
     <div className='body'>
@@ -90,7 +103,7 @@ function App() {
       {renderItems()}
 
       <div className='footer'>
-        <p>4 items</p>
+        <p>{getNum()}</p>
         <button type='button' onClick={clearCompletedItems}>Clear Completed</button>
       </div>
     </div>
