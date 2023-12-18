@@ -3,15 +3,15 @@ import './AddItem.css'
 import { MdCancel } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
 
-const AddItem = ( {title} ) => {
+const AddItem = ( {data, deleteHandler} ) => {
   return (
     <div>
         <div className='item'>
             <div className="itemContent">
-                <MdCancel id='cancel'/>
-                <p>{title}</p>
+                <MdCancel className='cancel'/>
+                <p>{data.todoItem}</p>
             </div>
-            <MdDeleteForever id='delete'/>
+            <MdDeleteForever className='delete' onClick={() => deleteHandler(data.id)}/>
         </div>
     </div>
   )
