@@ -66,6 +66,10 @@ function App() {
       updateStatus={toggleItemStatus}/>)}
       
       {/* <AddItem /> */}
+      <div className='footer'>
+        <p>4 items</p>
+        <button>Clear Completed</button>
+      </div>
     </div>
   )
 }
