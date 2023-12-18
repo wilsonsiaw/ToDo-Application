@@ -40,6 +40,12 @@ function App() {
       })
     )
   }
+
+  // function to delete items
+  const clearCompletedItems = () => {
+    const todoItems = todos.filter(todo => !todo.completed);
+    setTodo(todoItems);
+  }
   
   return (
     <div className='body'>
@@ -68,7 +74,7 @@ function App() {
       {/* <AddItem /> */}
       <div className='footer'>
         <p>4 items</p>
-        <button>Clear Completed</button>
+        <button type='button' onClick={clearCompletedItems}>Clear Completed</button>
       </div>
     </div>
   )
