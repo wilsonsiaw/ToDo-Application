@@ -36,6 +36,11 @@
         color: #fda5a5;
         font-size: 1.4rem;
     }
+
+    .check {
+        color: #3a7563;
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -76,6 +81,11 @@
         color: #fda5a5;
         font-size: 1.5rem;
     }
+
+    .check {
+        color: #3a7563;
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -114,6 +124,11 @@
 
     .delete {
         color: #fda5a5;
+        font-size: 1.6rem;
+    }
+
+    .check {
+        color: #3a7563;
         font-size: 1.6rem;
     }
 }
