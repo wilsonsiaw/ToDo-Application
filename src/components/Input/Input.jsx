@@ -31,7 +31,7 @@ const Input = ( {addHandler} ) => {
         <form action="" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="addTodo">
-                    <input type="text" id='addTodo' name='addTodo' placeholder='Create a new ToDo item'
+                    <input type="text" required id='addTodo' name='addTodo' placeholder='Create a new ToDo item'
                     value={input} onChange={handleChange}/>
                 </label>
             </div>
