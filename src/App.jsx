@@ -28,6 +28,18 @@ function App() {
     const newList = todos.filter(todo => todo.id !== id);
     setTodo(newList)
   }
+
+  // Function to toggle the status of an item
+  const toggleItemStatus = (id) => {
+    setTodo(
+      todos.map(todo => {
+        if (todo.id === id ) {
+          return {...todo, completed: !todo.completed};
+        }
+        return todo;
+      })
+    )
+  }
   
   return (
     <div className='body'>
@@ -50,7 +62,8 @@ function App() {
       <Filter />
 
       {/* Map over the todos items and render an individual AddItem component */}
-      {todos.map((todo) => <AddItem key={todo.id} data={todo} deleteHandler={deleteItemById}/>)}
+      {todos.map((todo) => <AddItem key={todo.id} data={todo} deleteHandler={deleteItemById}
+      updateStatus={toggleItemStatus}/>)}
       
       {/* <AddItem /> */}
     </div>
