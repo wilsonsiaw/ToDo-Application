@@ -7,6 +7,21 @@ import Filter from './components/Filter/Filter';
 
 
 function App() {
+
+  // create useState hook
+  const [todos, setTodo] = useState([]);
+  
+  // function that adds new todo items to the todo list
+  const addTodo = (text) => {
+    // object that you want to render as a todo item
+    const newToDo = {
+      id: Date.now(),
+      todoItem: text,
+      completed: false,
+    }
+
+    setTodo([newToDo, ...todos]);
+  }
   
   return (
     <div className='body'>
@@ -24,10 +39,14 @@ function App() {
           </div>
         </div>
       </header>
-
-      <Input />
+      {/* Add the function created above as a handler */}
+      <Input addHandler={addTodo}/>
       <Filter />
-      <AddItem />
+
+      {/* Map over the todos items and render an individual AddItem component */}
+      {todos.map((todo) => <AddItem key={todo.id} title={todo.todoItem}/>)}
+      
+      {/* <AddItem /> */}
     </div>
   )
 }
