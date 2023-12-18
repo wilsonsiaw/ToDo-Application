@@ -22,6 +22,12 @@ function App() {
 
     setTodo([newToDo, ...todos]);
   }
+
+  // Create function to delete an item from the list
+  const deleteItemById = (id) => { 
+    const newList = todos.filter(todo => todo.id !== id);
+    setTodo(newList)
+  }
   
   return (
     <div className='body'>
@@ -44,7 +50,7 @@ function App() {
       <Filter />
 
       {/* Map over the todos items and render an individual AddItem component */}
-      {todos.map((todo) => <AddItem key={todo.id} title={todo.todoItem}/>)}
+      {todos.map((todo) => <AddItem key={todo.id} data={todo} deleteHandler={deleteItemById}/>)}
       
       {/* <AddItem /> */}
     </div>
